@@ -1,0 +1,218 @@
+.experience-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5% 10%;
+}
+
+.experience-container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    > h1 {
+        margin: 0 0 40px;
+    }
+}
+
+.experience-timeline {
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 42px;
+    list-style: none;
+
+    &::before {
+        position: absolute;
+        top: 10px;
+        bottom: 18px;
+        left: 14px;
+        width: 2px;
+        background: rgba(185, 154, 255, 0.45);
+        content: "";
+    }
+}
+
+.experience-timeline-entry {
+    position: relative;
+    padding: 0 0 28px;
+
+    &:last-child {
+        padding-bottom: 10px;
+    }
+}
+
+.experience-timeline-entry.education .experience-card {
+    border-left: 3px solid #8b65d6;
+}
+
+.experience-timeline-entry.research .experience-card {
+    border-left: 3px solid #5e9c9a;
+}
+
+.experience-timeline-marker {
+    position: absolute;
+    z-index: 1;
+    top: 18px;
+    left: -42px;
+    display: grid;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    border: 3px solid #0d1116;
+    border-radius: 50%;
+    background: #5000ca;
+    color: white;
+    font-size: 0.8rem;
+
+    &.current {
+        box-shadow: 0 0 0 4px rgba(80, 0, 202, 0.2);
+    }
+
+    &.education {
+        background: #7250b5;
+    }
+}
+
+.experience-timeline-marker.research {
+    background: #347b78;
+}
+
+.experience-card {
+    position: relative;
+    padding: 22px 26px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+
+    h2, h3, p {
+        color: rgb(39, 40, 34);
+    }
+
+    h2 {
+        margin: 10px 0 4px;
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        margin: 0 0 12px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.65;
+    }
+}
+
+.satellite-experience-card {
+    border-left: 4px solid #8f70d8;
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(80, 0, 202, 0.1), transparent 48%),
+        #fff;
+    scroll-margin-top: 100px;
+
+    h2 {
+        font-size: 1.35rem;
+    }
+}
+
+.satellite-partners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        padding: 5px 10px;
+        border: 1px solid rgba(80, 0, 202, 0.2);
+        border-radius: 999px;
+        background: rgba(80, 0, 202, 0.07);
+        color: #43227e;
+        font-size: 0.78rem;
+        font-weight: 700;
+    }
+}
+
+.experience-date {
+    color: #5d36a8;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.9rem;
+}
+
+.experience-type {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.experience-current-label {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: rgba(80, 0, 202, 0.1);
+    color: #5000ca;
+    font-size: 0.75rem;
+    font-weight: 700;
+    vertical-align: 1px;
+}
+
+.light-mode {
+    .experience-timeline::before {
+        background: rgba(80, 0, 202, 0.3);
+    }
+
+    .experience-timeline-marker {
+        border-color: #f8f9fa;
+    }
+
+    .experience-type {
+        color: #555;
+    }
+
+    .satellite-experience-card {
+        background:
+            radial-gradient(ellipse at 100% 0%, rgba(80, 0, 202, 0.09), transparent 48%),
+            #fff;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .experience-section {
+        padding: 8% 5%;
+    }
+
+    .experience-container > h1 {
+        margin-bottom: 28px;
+    }
+
+    .experience-timeline {
+        padding-left: 34px;
+
+        &::before {
+            left: 11px;
+        }
+    }
+
+    .experience-timeline-marker {
+        left: -34px;
+        width: 26px;
+        height: 26px;
+        font-size: 0.7rem;
+    }
+
+    .experience-card {
+        padding: 18px;
+    }
+
+    .experience-card h2 {
+        font-size: 1.1rem;
+    }
+
+}

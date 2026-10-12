@@ -1,0 +1,305 @@
+.dark-mode .about-section {
+    background-color: rgba(0, 0, 0, 0.34);
+}
+
+.about-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: flex;
+    gap: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 100px 15% 70px;
+    min-height: 520px;
+    background-image:
+        linear-gradient(rgba(8, 7, 18, 0.58), rgba(8, 7, 18, 0.62)),
+        url("../images/fundo-rede-roxo-2x1-hd.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    &::before,
+    &::after {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        pointer-events: none;
+    }
+
+    &::before {
+        right: -10%;
+        bottom: -185px;
+        width: min(740px, 75vw);
+        height: 360px;
+        border: 1px solid rgba(185, 154, 255, 0.2);
+        border-radius: 50%;
+        transform: rotate(-18deg);
+        box-shadow:
+            0 0 0 28px rgba(185, 154, 255, 0.025),
+            0 0 0 58px rgba(185, 154, 255, 0.02);
+    }
+
+    &::after {
+        inset: 0;
+        opacity: 0.32;
+        background-image:
+            radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1.5px),
+            radial-gradient(circle, rgba(185, 154, 255, 0.85) 1px, transparent 1.5px);
+        background-position: 14% 28%, 88% 22%;
+        background-size: 170px 150px, 230px 190px;
+    }
+}
+
+.about-section .content {
+    text-align: left;
+    z-index: 2;
+
+    .profile-social-links {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 18px;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: color 160ms ease, transform 160ms ease;
+
+            &:hover {
+                color: #cbb5ff;
+                transform: translateY(-2px);
+            }
+
+            &:focus-visible {
+                outline: 2px solid #cbb5ff;
+                outline-offset: 4px;
+                border-radius: 3px;
+            }
+        }
+
+        svg {
+            font-size: 2rem;
+        }
+    }
+
+    .social_icons {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        color: white;
+
+        svg {
+            font-size: 1.8em;
+        }
+    }
+
+    .mobile_social_icons {
+        display: none;
+    }
+
+    p {
+        margin: 12px 0 0;
+    }
+
+    h1 {
+        font-size: clamp(2.6rem, 6vw, 5em);
+        line-height: 1.05;
+        margin: 8px 0 0;
+    }
+
+    .profile-eyebrow {
+        color: #b99aff;
+        font-family: "Lato", sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .profile-headline {
+        max-width: 760px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #f3efff;
+        text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+    }
+
+    .profile-location {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 12px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.95rem;
+        font-weight: 500;
+
+        &::before {
+            margin-right: 8px;
+            color: #b99aff;
+            content: "⌖";
+            font-size: 1.2rem;
+        }
+    }
+
+}
+
+.about-section .image-wrapper {
+    z-index: 2;
+    flex: 0 0 auto;
+
+    .profile-photo {
+        display: block;
+        width: 150px;
+        height: 150px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center 42%;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.profile-summary {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 15px 10% 70px;
+
+    h2 {
+        margin-top: 0;
+        font-size: 2rem;
+    }
+
+    p {
+        max-width: 900px;
+        line-height: 1.8;
+    }
+}
+
+.light-mode .about-section .content .profile-headline {
+    color: #16121f;
+    text-shadow: none;
+}
+
+.light-mode .about-section .content .profile-location {
+    color: rgba(13, 17, 22, 0.78);
+}
+
+.light-mode .about-section .content .profile-social-links a {
+    color: #16121f;
+
+    &:hover {
+        color: #5000ca;
+    }
+}
+
+.light-mode .about-section::before {
+    border-color: rgba(80, 0, 202, 0.17);
+    box-shadow:
+        0 0 0 28px rgba(80, 0, 202, 0.025),
+        0 0 0 58px rgba(80, 0, 202, 0.02);
+}
+
+.light-mode .about-section::after {
+    opacity: 0.2;
+}
+
+@media screen {
+    @media (max-width: 567px) {
+        .nav-left{
+            padding-top: 20px;
+            float:left;
+        }
+
+        .nav-left img {
+            height: 35px
+        }
+
+        .nav-right {
+            float:right;
+        }
+
+        .nav-right li {
+            padding: 10px 15px;
+            list-style:none;
+            font-size:13px;
+            color:white;
+            width: 10%;
+        }
+
+        .nav-right ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        .about {
+            padding-left: 5%;
+            padding-right: 5%;
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width:768px) {
+        .about-section p {
+            text-align: left;
+        }
+
+        .container {
+            display: initial;
+        }
+
+        .social_icons {
+            display: none !important;
+        }
+
+        .mobile_social_icons {
+            padding-top: 10px;
+            display: flex !important;
+            flex-direction: row;
+            gap: 10px;
+            color: white;
+    
+            svg {
+                font-size: 1.8em;
+            }
+        }
+
+        .about-section {
+            box-sizing: border-box;
+            min-height: auto;
+            padding: 125px 5% 55px;
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        .about-section .image-wrapper .profile-photo {
+            width: 76px;
+            height: 76px;
+        }
+
+        .about-section .content {
+            width: auto;
+            padding: 0 0 5%;
+        }
+
+        .about-section .image-wrapper {
+            padding: 0;
+            width: auto;
+        }
+
+        .profile-summary {
+            padding: 10px 5% 50px;
+        }
+    }
+}

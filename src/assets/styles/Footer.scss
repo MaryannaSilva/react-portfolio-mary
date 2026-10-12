@@ -1,0 +1,38 @@
+footer {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .footer-social-links {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 14px;
+
+        a {
+            display: inline-flex;
+            color: white;
+            transition: color 160ms ease, transform 160ms ease;
+
+            &:hover {
+                color: #b99aff;
+                transform: translateY(-2px);
+            }
+
+            &:focus-visible {
+                outline: 2px solid #cbb5ff;
+                outline-offset: 4px;
+                border-radius: 3px;
+            }
+        }
+    }
+
+    svg {
+        width: 1.5em !important;
+        height: 1.5em !important;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+}
