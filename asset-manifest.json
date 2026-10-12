@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-portfolio-mary/static/css/main.1537b492.css",
+    "main.js": "/react-portfolio-mary/static/js/main.4d7efc8e.js",
+    "static/js/453.7c85ee29.chunk.js": "/react-portfolio-mary/static/js/453.7c85ee29.chunk.js",
+    "static/media/fundo-rede-roxo-2x1-hd.png": "/react-portfolio-mary/static/media/fundo-rede-roxo-2x1-hd.ed00d82662ecd8a57057.png",
+    "static/media/maryanna-profile.png": "/react-portfolio-mary/static/media/maryanna-profile.446c544d853994d7784f.png",
+    "index.html": "/react-portfolio-mary/index.html",
+    "main.1537b492.css.map": "/react-portfolio-mary/static/css/main.1537b492.css.map",
+    "main.4d7efc8e.js.map": "/react-portfolio-mary/static/js/main.4d7efc8e.js.map",
+    "453.7c85ee29.chunk.js.map": "/react-portfolio-mary/static/js/453.7c85ee29.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1537b492.css",
+    "static/js/main.4d7efc8e.js"
+  ]
+}
